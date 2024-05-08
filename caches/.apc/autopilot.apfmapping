@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="cache.cpp" path="/home/omerfaruk/Projects/okul/caches/cache.cpp"/>
+    <originFiles name="cache.hpp" path="/home/omerfaruk/Projects/okul/caches/cache.hpp"/>
+    <originFiles name="fetch_block.cpp" path="/home/omerfaruk/Projects/okul/caches/fetch_block.cpp"/>
+    <originFiles name="writeback.cpp" path="/home/omerfaruk/Projects/okul/caches/writeback.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="cache_tb.cpp" path="/home/omerfaruk/Projects/okul/caches/cache_tb.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

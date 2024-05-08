@@ -1,0 +1,49 @@
+{
+  "0": {
+    "basicblocks": 27,
+    "calls": "1 2",
+    "file": "cache.cpp",
+    "fileloc": 6,
+    "instructions": 405,
+    "loads": {
+      "G": 4,
+      "L": 19
+    },
+    "name": "cache_access",
+    "stores": {
+      "G": 9,
+      "L": 15
+    },
+    "total_instructions": 2271
+  },
+  "1": {
+    "basicblocks": 6,
+    "calls": "",
+    "file": "writeback.cpp",
+    "fileloc": 12,
+    "instructions": 40,
+    "loads": {
+      "L": 2
+    },
+    "name": "writeback_block",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 218
+  },
+  "2": {
+    "basicblocks": 6,
+    "calls": "",
+    "file": "fetch_block.cpp",
+    "fileloc": 12,
+    "instructions": 40,
+    "loads": {
+      "L": 2
+    },
+    "name": "fetch_block",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 218
+  }
+}

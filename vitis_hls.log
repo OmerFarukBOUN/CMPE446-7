@@ -1,0 +1,150 @@
+INFO: [HLS 200-10] Running '/home/omerfaruk/tools/Xilinx/Vitis_HLS/2023.2/bin/unwrapped/lnx64.o/vitis_hls'
+INFO: [HLS 200-10] For user 'omerfaruk' on host 'DarkChocolate' (Linux_x86_64 version 6.5.0-28-generic) on Wed May 08 03:00:50 +03 2024
+INFO: [HLS 200-10] On os Ubuntu 22.04.4 LTS
+INFO: [HLS 200-10] In directory '/home/omerfaruk/Projects/okul/caches'
+INFO: [HLS 200-2053] The vitis_hls executable is being deprecated. Consider using vitis-run --mode hls --tcl
+Sourcing Tcl script '/home/omerfaruk/Projects/okul/caches/caches/solution1/csynth.tcl'
+INFO: [HLS 200-1510] Running: source /home/omerfaruk/Projects/okul/caches/caches/solution1/csynth.tcl
+INFO: [HLS 200-1510] Running: open_project caches 
+INFO: [HLS 200-10] Opening project '/home/omerfaruk/Projects/okul/caches/caches'.
+INFO: [HLS 200-1510] Running: set_top cache_access 
+INFO: [HLS 200-1510] Running: add_files cache.cpp 
+INFO: [HLS 200-10] Adding design file 'cache.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files cache.hpp 
+INFO: [HLS 200-10] Adding design file 'cache.hpp' to the project
+INFO: [HLS 200-1510] Running: add_files fetch_block.cpp 
+INFO: [HLS 200-10] Adding design file 'fetch_block.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files writeback.cpp 
+INFO: [HLS 200-10] Adding design file 'writeback.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb cache_tb.cpp -cflags -Wno-unknown-pragmas 
+INFO: [HLS 200-10] Adding test bench file 'cache_tb.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vivado 
+INFO: [HLS 200-10] Opening solution '/home/omerfaruk/Projects/okul/caches/caches/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xczu7ev-ffvf1517-3-e'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2023.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1464] Running solution command: config_cosim -tool=xsim
+INFO: [HLS 200-1464] Running solution command: config_cosim -trace_level=port
+INFO: [HLS 200-1510] Running: set_part xczu7ev-ffvf1517-3-e 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_cosim -tool xsim -trace_level port 
+INFO: [HLS 200-1510] Running: source ./caches/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name cache_access cache_access 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.1 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.1 seconds; current allocated memory: 266.324 MB.
+INFO: [HLS 200-10] Analyzing design file 'cache.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'fetch_block.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'writeback.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 10.29 seconds. CPU system time: 1.51 seconds. Elapsed time: 11.98 seconds; current allocated memory: 267.547 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 2,271 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: /home/omerfaruk/Projects/okul/caches/caches/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 171 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: /home/omerfaruk/Projects/okul/caches/caches/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 138 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: /home/omerfaruk/Projects/okul/caches/caches/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 146 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: /home/omerfaruk/Projects/okul/caches/caches/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 122 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: /home/omerfaruk/Projects/okul/caches/caches/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 121 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: /home/omerfaruk/Projects/okul/caches/caches/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 121 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: /home/omerfaruk/Projects/okul/caches/caches/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 121 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: /home/omerfaruk/Projects/okul/caches/caches/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 121 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: /home/omerfaruk/Projects/okul/caches/caches/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 122 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: /home/omerfaruk/Projects/okul/caches/caches/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 122 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: /home/omerfaruk/Projects/okul/caches/caches/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 121 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: /home/omerfaruk/Projects/okul/caches/caches/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 121 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: /home/omerfaruk/Projects/okul/caches/caches/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 121 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: /home/omerfaruk/Projects/okul/caches/caches/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 128 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: /home/omerfaruk/Projects/okul/caches/caches/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 138 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: /home/omerfaruk/Projects/okul/caches/caches/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 214-178] Inlining function 'writeback_block(int*, int*, ap_uint<11>)' into 'cache_access(ap_uint<11>, int, bool, int*)' (cache.cpp:12:0)
+INFO: [HLS 214-178] Inlining function 'fetch_block(int*, int*, ap_uint<11>)' into 'cache_access(ap_uint<11>, int, bool, int*)' (cache.cpp:12:0)
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_24_1> at writeback.cpp:24:22 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_24_1> at fetch_block.cpp:24:22 
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 2.91 seconds. CPU system time: 0.44 seconds. Elapsed time: 7.9 seconds; current allocated memory: 270.098 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 270.098 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 270.316 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 270.422 MB.
+INFO: [XFORM 203-102] Automatically partitioning small array 'set_old' completely based on array size.
+INFO: [XFORM 203-101] Partitioning array 'set_old' in dimension 1 completely.
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.4i1P0A.i2' into 'cache_access' (cache.cpp:51).
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.06 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.08 seconds; current allocated memory: 292.816 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 303.188 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'cache_access' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'cache_access_Pipeline_VITIS_LOOP_24_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_24_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_24_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.06 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.07 seconds; current allocated memory: 304.535 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 304.535 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'cache_access_Pipeline_VITIS_LOOP_24_11' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_24_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_24_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 305.059 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.02 seconds; current allocated memory: 305.059 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'cache_access' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 306.035 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 306.035 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'cache_access_Pipeline_VITIS_LOOP_24_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'cache_access_Pipeline_VITIS_LOOP_24_1' pipeline 'VITIS_LOOP_24_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'cache_access_Pipeline_VITIS_LOOP_24_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.03 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.03 seconds; current allocated memory: 306.035 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'cache_access_Pipeline_VITIS_LOOP_24_11' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'cache_access_Pipeline_VITIS_LOOP_24_11' pipeline 'VITIS_LOOP_24_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'cache_access_Pipeline_VITIS_LOOP_24_11'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 306.766 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'cache_access' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'cache_access/address' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cache_access/value_r' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cache_access/action' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cache_access/mymem' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'cache_access' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Register 'set_old_3' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'set_old_0' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'set_old_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'set_old_2' is power-on initialization.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'cache_access'.
+INFO: [RTMG 210-278] Implementing memory 'cache_access_cache_tag_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'cache_access_cache_valid_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'cache_access_cache_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.09 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.1 seconds; current allocated memory: 308.328 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.23 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.25 seconds; current allocated memory: 313.449 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.29 seconds. CPU system time: 0.05 seconds. Elapsed time: 0.34 seconds; current allocated memory: 322.352 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for cache_access.
+INFO: [VLOG 209-307] Generating Verilog RTL for cache_access.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 411.18 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 14.37 seconds. CPU system time: 2.1 seconds. Elapsed time: 21.18 seconds; current allocated memory: 56.305 MB.
+INFO: [HLS 200-112] Total CPU user time: 16.19 seconds. Total CPU system time: 2.42 seconds. Total elapsed time: 23.12 seconds; peak allocated memory: 322.629 MB.

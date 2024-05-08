@@ -1,0 +1,154 @@
+
+
+================================================================
+== Vitis HLS Report for 'cache_access_Pipeline_VITIS_LOOP_24_11'
+================================================================
+* Date:           Wed May  8 03:01:12 2024
+
+* Version:        2023.2.2 (Build 4101106 on Feb  9 2024)
+* Project:        caches
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu7ev-ffvf1517-3-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  2.254 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       66|       66|  0.660 us|  0.660 us|   66|   66|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_24_1  |       64|       64|         2|          1|          1|    64|       yes|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 2
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 2
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 2, States = { 1 2 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 2.25>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%i = alloca i32 1" [fetch_block.cpp:22->cache.cpp:65]   --->   Operation 5 'alloca' 'i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %mymem, void @empty_1, i32 0, i32 0, void @empty_0, i32 4294967295, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 6 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%address_1_read = read i11 @_ssdm_op_Read.ap_auto.i11, i11 %address_1"   --->   Operation 7 'read' 'address_1_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%zext_ln26_3_read = read i9 @_ssdm_op_Read.ap_auto.i9, i9 %zext_ln26_3"   --->   Operation 8 'read' 'zext_ln26_3_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.40ns)   --->   "%store_ln22 = store i7 0, i7 %i" [fetch_block.cpp:22->cache.cpp:65]   --->   Operation 9 'store' 'store_ln22' <Predicate = true> <Delay = 0.40>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.inc.i555"   --->   Operation 10 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%i_1 = load i7 %i" [fetch_block.cpp:26->cache.cpp:65]   --->   Operation 11 'load' 'i_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.70ns)   --->   "%icmp_ln24 = icmp_eq  i7 %i_1, i7 64" [fetch_block.cpp:24->cache.cpp:65]   --->   Operation 12 'icmp' 'icmp_ln24' <Predicate = true> <Delay = 0.70> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.70> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 13 [1/1] (0.70ns)   --->   "%add_ln24 = add i7 %i_1, i7 1" [fetch_block.cpp:24->cache.cpp:65]   --->   Operation 13 'add' 'add_ln24' <Predicate = true> <Delay = 0.70> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%br_ln24 = br i1 %icmp_ln24, void %for.inc.i555.split, void %_Z11fetch_blockPiS_7ap_uintILi11EE.exit.exitStub" [fetch_block.cpp:24->cache.cpp:65]   --->   Operation 14 'br' 'br_ln24' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%zext_ln26 = zext i7 %i_1" [fetch_block.cpp:26->cache.cpp:65]   --->   Operation 15 'zext' 'zext_ln26' <Predicate = (!icmp_ln24)> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.71ns)   --->   "%add_ln26_1 = add i9 %zext_ln26_3_read, i9 %zext_ln26" [fetch_block.cpp:26->cache.cpp:65]   --->   Operation 16 'add' 'add_ln26_1' <Predicate = (!icmp_ln24)> <Delay = 0.71> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.71> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%trunc_ln26 = trunc i7 %i_1" [fetch_block.cpp:26->cache.cpp:65]   --->   Operation 17 'trunc' 'trunc_ln26' <Predicate = (!icmp_ln24)> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%zext_ln26_2 = zext i6 %trunc_ln26" [fetch_block.cpp:26->cache.cpp:65]   --->   Operation 18 'zext' 'zext_ln26_2' <Predicate = (!icmp_ln24)> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.75ns)   --->   "%add_ln26 = add i11 %zext_ln26_2, i11 %address_1_read" [fetch_block.cpp:26->cache.cpp:65]   --->   Operation 19 'add' 'add_ln26' <Predicate = (!icmp_ln24)> <Delay = 0.75> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.75> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%zext_ln26_1 = zext i11 %add_ln26" [fetch_block.cpp:26->cache.cpp:65]   --->   Operation 20 'zext' 'zext_ln26_1' <Predicate = (!icmp_ln24)> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%mymem_addr = getelementptr i32 %mymem, i64 0, i64 %zext_ln26_1" [fetch_block.cpp:26->cache.cpp:65]   --->   Operation 21 'getelementptr' 'mymem_addr' <Predicate = (!icmp_ln24)> <Delay = 0.00>
+ST_1 : Operation 22 [2/2] (1.09ns)   --->   "%mymem_load = load i11 %mymem_addr" [fetch_block.cpp:26->cache.cpp:65]   --->   Operation 22 'load' 'mymem_load' <Predicate = (!icmp_ln24)> <Delay = 1.09> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.09> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2048> <RAM>
+ST_1 : Operation 23 [1/1] (0.40ns)   --->   "%store_ln22 = store i7 %add_ln24, i7 %i" [fetch_block.cpp:22->cache.cpp:65]   --->   Operation 23 'store' 'store_ln22' <Predicate = (!icmp_ln24)> <Delay = 0.40>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 32 'ret' 'ret_ln0' <Predicate = (icmp_ln24)> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 2.19>
+ST_2 : Operation 24 [1/1] (0.00ns)   --->   "%zext_ln26_4 = zext i9 %add_ln26_1" [fetch_block.cpp:26->cache.cpp:65]   --->   Operation 24 'zext' 'zext_ln26_4' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 25 [1/1] (0.00ns)   --->   "%cache_addr = getelementptr i32 %cache, i64 0, i64 %zext_ln26_4" [fetch_block.cpp:26->cache.cpp:65]   --->   Operation 25 'getelementptr' 'cache_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 26 [1/1] (0.00ns)   --->   "%specpipeline_ln22 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 0, i32 0, void @empty_0" [fetch_block.cpp:22->cache.cpp:65]   --->   Operation 26 'specpipeline' 'specpipeline_ln22' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 27 [1/1] (0.00ns)   --->   "%speclooptripcount_ln22 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 64, i64 64, i64 64" [fetch_block.cpp:22->cache.cpp:65]   --->   Operation 27 'speclooptripcount' 'speclooptripcount_ln22' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 28 [1/1] (0.00ns)   --->   "%specloopname_ln24 = specloopname void @_ssdm_op_SpecLoopName, void @empty_3" [fetch_block.cpp:24->cache.cpp:65]   --->   Operation 28 'specloopname' 'specloopname_ln24' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 29 [1/2] (1.09ns)   --->   "%mymem_load = load i11 %mymem_addr" [fetch_block.cpp:26->cache.cpp:65]   --->   Operation 29 'load' 'mymem_load' <Predicate = true> <Delay = 1.09> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.09> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2048> <RAM>
+ST_2 : Operation 30 [1/1] (1.09ns)   --->   "%store_ln26 = store i32 %mymem_load, i9 %cache_addr" [fetch_block.cpp:26->cache.cpp:65]   --->   Operation 30 'store' 'store_ln26' <Predicate = true> <Delay = 1.09> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.09> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 512> <RAM>
+ST_2 : Operation 31 [1/1] (0.00ns)   --->   "%br_ln24 = br void %for.inc.i555" [fetch_block.cpp:24->cache.cpp:65]   --->   Operation 31 'br' 'br_ln24' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10.000ns, clock uncertainty: 2.700ns.
+
+ <State 1>: 2.254ns
+The critical path consists of the following:
+	'store' operation 0 bit ('store_ln22', fetch_block.cpp:22->cache.cpp:65) of constant 0 on local variable 'i', fetch_block.cpp:22->cache.cpp:65 [9]  (0.402 ns)
+	'load' operation 7 bit ('i', fetch_block.cpp:26->cache.cpp:65) on local variable 'i', fetch_block.cpp:22->cache.cpp:65 [12]  (0.000 ns)
+	'add' operation 11 bit ('add_ln26', fetch_block.cpp:26->cache.cpp:65) [26]  (0.753 ns)
+	'getelementptr' operation 11 bit ('mymem_addr', fetch_block.cpp:26->cache.cpp:65) [28]  (0.000 ns)
+	'load' operation 32 bit ('mymem_load', fetch_block.cpp:26->cache.cpp:65) on array 'mymem' [29]  (1.099 ns)
+
+ <State 2>: 2.198ns
+The critical path consists of the following:
+	'load' operation 32 bit ('mymem_load', fetch_block.cpp:26->cache.cpp:65) on array 'mymem' [29]  (1.099 ns)
+	'store' operation 0 bit ('store_ln26', fetch_block.cpp:26->cache.cpp:65) of variable 'mymem_load', fetch_block.cpp:26->cache.cpp:65 on array 'cache' [30]  (1.099 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

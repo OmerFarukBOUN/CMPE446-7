@@ -1,0 +1,44 @@
+[
+  {
+    "functionLabel": "",
+    "functionName": "cache_access",
+    "id": 0,
+    "ifcond": "",
+    "insert_position": "",
+    "label": "",
+    "pragma": {
+      "name": "TOP",
+      "option": [
+        {
+          "name": "name",
+          "value": "cache_access"
+        }
+      ]
+    },
+    "slx": false,
+    "sourceFile": "/home/omerfaruk/Projects/okul/caches/caches/solution1/directives.tcl",
+    "sourceLine": 7,
+    "success": true
+  },
+  {
+    "functionLabel": "",
+    "functionName": "cache_access",
+    "id": 1,
+    "ifcond": "",
+    "insert_position": "",
+    "label": "",
+    "pragma": {
+      "name": "TOP",
+      "option": [
+        {
+          "name": "name",
+          "value": "cache_access"
+        }
+      ]
+    },
+    "slx": false,
+    "sourceFile": "/home/omerfaruk/Projects/okul/caches/caches/solution1/csynth.tcl",
+    "sourceLine": 19,
+    "success": true
+  }
+]

@@ -1,0 +1,15 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/omerfaruk/Projects/okul/caches/caches/solution1/csynth.tcl:19:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="cache_access" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=cache_access" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/omerfaruk/Projects/okul/caches/caches/solution1/directives.tcl:7:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="cache_access" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=cache_access" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="cache.cpp:12:0" msg_body="Inlining function 'writeback_block(int*, int*, ap_uint&lt;11&gt;)' into 'cache_access(ap_uint&lt;11&gt;, int, bool, int*)'">
+        <args Callee="writeback_block(int*, int*, ap_uint&lt;11&gt;)" Callee-DebugLoc="File writeback.cpp Line 13 Column 0" Caller="cache_access(ap_uint&lt;11&gt;, int, bool, int*)" Caller-DebugLoc="File cache.cpp Line 12 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="cache.cpp:12:0" msg_body="Inlining function 'fetch_block(int*, int*, ap_uint&lt;11&gt;)' into 'cache_access(ap_uint&lt;11&gt;, int, bool, int*)'">
+        <args Callee="fetch_block(int*, int*, ap_uint&lt;11&gt;)" Callee-DebugLoc="File fetch_block.cpp Line 13 Column 0" Caller="cache_access(ap_uint&lt;11&gt;, int, bool, int*)" Caller-DebugLoc="File cache.cpp Line 12 Column 0"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

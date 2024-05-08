@@ -1,0 +1,8 @@
+   Build using "/home/omerfaruk/tools/Xilinx/Vitis_HLS/2023.2/tps/lnx64/gcc-8.3.0/bin/g++"
+   Compiling apatb_cache_access.cpp
+   Compiling cache.cpp_pre.cpp.tb.cpp
+   Compiling cache_tb.cpp_pre.cpp.tb.cpp
+   Compiling fetch_block.cpp_pre.cpp.tb.cpp
+   Compiling writeback.cpp_pre.cpp.tb.cpp
+   Compiling apatb_cache_access_ir.ll
+   Generating cosim.tv.exe

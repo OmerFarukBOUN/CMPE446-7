@@ -1,0 +1,48 @@
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: cache.cpp, Line: 12, Column: 0 }
+Function:        _Z12cache_access7ap_uintILi11EEibPi
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'writeback_block(int*, int*, ap_uint<11>)'
+    DebugLoc:        { File: writeback.cpp, Line: 13, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'cache_access(ap_uint<11>, int, bool, int*)'
+    DebugLoc:        { File: cache.cpp, Line: 12, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: cache.cpp, Line: 12, Column: 0 }
+Function:        _Z12cache_access7ap_uintILi11EEibPi
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'fetch_block(int*, int*, ap_uint<11>)'
+    DebugLoc:        { File: fetch_block.cpp, Line: 13, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'cache_access(ap_uint<11>, int, bool, int*)'
+    DebugLoc:        { File: cache.cpp, Line: 12, Column: 0 }
+  - String:          ''''
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_24_1
+  - String:          '> at '
+  - LoopLoc:         'writeback.cpp:24:22'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_24_1
+  - String:          '> at '
+  - LoopLoc:         'fetch_block.cpp:24:22'
+  - String:          ' '
+...
